@@ -14,7 +14,7 @@ class GroupRepository
     public function getAll()
     {
         $pdo = $this->db->getConnection();
-        $stmt = $pdo->query('SELECT * FROM groups');
+        $stmt = $pdo->query('SELECT * FROM `groups`');
         
         return $stmt->fetchAll();
     }

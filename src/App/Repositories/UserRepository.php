@@ -18,7 +18,7 @@ class UserRepository
         $sql = "
         SELECT u.*, GROUP_CONCAT(g.groupname SEPARATOR ', ') AS usergroups FROM users AS u
         LEFT JOIN user_groups AS ug ON u.userid = ug.userid
-        LEFT JOIN groups AS g ON ug.groupid = g.groupid
+        LEFT JOIN `groups` AS g ON ug.groupid = g.groupid
         GROUP BY u.userid
         ORDER BY u.userid
         ";

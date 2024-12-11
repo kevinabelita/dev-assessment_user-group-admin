@@ -19,7 +19,7 @@ class UserGroupRepository
         SELECT 
             g.groupid, 
             g.groupname 
-        FROM groups AS g 
+        FROM `groups` AS g 
         JOIN user_groups AS ug
         ON ug.groupid = g.groupid
         WHERE ug.userid = :userid
